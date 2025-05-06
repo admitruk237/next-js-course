@@ -1,18 +1,15 @@
-import course from './course.json';
+import ClientWrapper from './ClientWraper';
 
-export default function Home() {
+export default async function Home() {
   return (
-    <main>
-      <ul className="text-center mt-20">
-        {course.lessons.map((lesson) => {
-          return (
-            <li className="mb-10" key={lesson.name}>
-              <h2 className="font-bold">{lesson.title}</h2>
-              <p>{lesson.shortSummary}</p>
-            </li>
-          );
-        })}
-      </ul>
+    <main className="p-10">
+      <h1
+        className="font-bold text-2xl
+      mb-10"
+      >
+        REACT
+      </h1>
+      <ClientWrapper />
     </main>
   );
 }
